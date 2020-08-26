@@ -12,14 +12,15 @@ class seleccion:
 		lbl.grid(column = 0, row = 0)
 
 		def clickadd():
-			#Algo hara
 			MisProductos = Productos()
-			MisProductos.ventanaprincipal()
-			MenuTk.destroy()
+			MisProductos.ventanaprincipal(usuario)
+
+		def clicklist():
+			messagebox.showwarning("Inaccesible", "Sistema aun en desarrollo")
 
 		btnadd = Button(MenuTk, text = "Añadir producto.", command = clickadd)
 		btnadd.grid(column = 0, row = 1)
-		btnlist = Button(MenuTk, text = "Lista de productos.")
+		btnlist = Button(MenuTk, text = "Lista de productos.", command = clicklist)
 		btnlist.grid(column = 1, row = 1)
 
 		MenuTk.mainloop()
